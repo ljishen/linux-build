@@ -1,0 +1,9 @@
+# Setup the Build System
+
+As mentioned in the release notes, each release version is built by the CI system from GitLab. This is an instruction for showing how to set up the build system so that you can release your own versions.
+
+1. Fork the repository into your GitHub account.
+2. From GitLab, new project through `Run CI/CD pipelines for external repositories`. Then choose to connect your forked repository from GitHub.
+3. The build process uses [github-release](https://github.com/aktau/github-release) to create releases on GitHub. To make it work, you need to generate a new personal access token from GitHub, and set an environment variable for the CI/CD pipeline of the mirrored repository you just created in GitLab. The scopes of the token should be `repo` if you forked the repository to be private and, otherwise, only `public_repo` scope is required. Once you got this token, you can add it to be a CI/CD variable on GitLab for the repository with the key name `GITHUB_TOKEN`.
+4. The build process required a docker-enabled GitLab Runner with `privileged` permission. Therefore, general shared Runners provided by GitLab.com by default do not work. One easy solution is to set up a specific Runner manually on one of your available hosts and configure it to be privileged. You can follow the instruction under the `CI/CD` menu of the settings of the GitLab repository to install and register a runner for your GitLab repository. Make sure that you also have docker installed on the same host. Once the runner is up and running, change the `privileged` variable to be `true` in the configuration file `/etc/gitlab-runner/config.toml` of the runner. To finally apply this change, restart the runner service with `sudo service gitlab-runner restart`.
+5. Now, you can run the pipeline of your GitLab repository and create your version releases.
