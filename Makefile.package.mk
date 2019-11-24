@@ -21,11 +21,11 @@ linux-$(BOARD_TARGET)-$(RELEASE_NAME)_arm64.deb:
 		--deb-field "Replaces: linux-board-virtual" \
 		--deb-field "Conflicts: linux-board-virtual" \
 		--force \
-		--url https://gitlab.com/ayufan-rock64/linux-build \
-		--description "Rock64 Linux virtual package: depends on kernel and compatibility package" \
-		-m "Kamil Trzciński <ayufan@ayufan.eu>" \
+		--url https://gitlab.com/ljishen/linux-build \
+		--description "ROCKPro64 Linux virtual package: depends on kernel and compatibility package" \
+		-m "Jianshen Liu <jliu120@ucsc.edu>" \
 		--license "MIT" \
-		--vendor "Kamil Trzciński" \
+		--vendor "University of California, Santa Cruz" \
 		-a arm64
 
 linux-virtual: linux-$(BOARD_TARGET)-$(RELEASE_NAME)_arm64.deb

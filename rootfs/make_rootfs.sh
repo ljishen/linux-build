@@ -81,6 +81,14 @@ case $DISTRO in
 		DISTRIB="ubuntu"
 		EXTRA_ARCHS="arm64"
 		;;
+	xenial)
+		version=$(curl -s https://api.github.com/repos/ljishen/linux-rootfs/releases/latest | jq -r ".tag_name")
+		ROOTFS="https://github.com/ljishen/linux-rootfs/releases/download/${version}/ubuntu-${DISTRO}-${VARIANT}-${version}-${BUILD_ARCH}.tar.xz"
+		FALLBACK_ROOTFS="https://github.com/ljishen/linux-rootfs/releases/download/${version}/ubuntu-${DISTRO}-minimal-${version}-${BUILD_ARCH}.tar.xz"
+		TAR_OPTIONS="-J --strip-components=1 binary"
+		DISTRIB="ubuntu"
+		EXTRA_ARCHS="arm64"
+		;;
 
 	stretch|buster)
 		version=$(curl -s https://api.github.com/repos/ayufan-rock64/linux-rootfs/releases/latest | jq -r ".tag_name")
