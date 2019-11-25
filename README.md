@@ -1,4 +1,4 @@
-# ayufan's Rock64 Linux releases
+# ljishen's ROCKPro64 Linux releases
 
 This repository contains a set of scripts to build ROCK64 linux images.
 
@@ -6,9 +6,9 @@ This is community maintained project in my free time. Don't expect everything to
 
 ## Releases
 
-You can always download [latest stable](https://github.com/ayufan-rock64/linux-build/releases/latest) release. The **releases** are meant to be stable versions.
+You can always download [latest stable](https://github.com/ljishen/linux-build/releases/latest) release. The **releases** are meant to be stable versions.
 
-If you want to test bleeding edge features use one of the [pre-releases](https://github.com/ayufan-rock64/linux-build/releases).
+If you want to test bleeding edge features use one of the [pre-releases](https://github.com/ljishen/linux-build/releases).
 Use pre-releases only if you want to test bleeding edge features.
 
 ## Compatibility
@@ -45,9 +45,9 @@ You can find latest pre-releases and releases of these components here:
 - [package](https://github.com/ayufan-rock64/linux-package/releases/latest) - scripts and configurations that improve Rock64 and RockPro64 experience,
 
 Some of the packages are distributed via [PPA](https://launchpad.net/~ayufan/+archive/ubuntu/rock64-ppa/).
-The sources of these packages are hosted in [this GitHub organization](https://github.com/ayufan-rock64).
+The sources of these packages are hosted in [the original author's organization](https://github.com/ayufan-rock64) and [this GitHub repository](https://github.com/ljishen/linux-build).
 
-This repository is regularly built by [Gitlab](https://gitlab.com/ayufan-repos/rock64/linux-build/pipelines) and released in [Releases sections](https://github.com/ayufan-rock64/linux-build/releases).
+This repository is regularly built by [GitLab](https://gitlab.com/ljishen/linux-build/pipelines) and released in [Releases sections](https://github.com/ljishen/linux-build/releases).
 
 ## Documentation
 
@@ -76,6 +76,7 @@ For technical information, see the following documents:
 
 These scripts are made available under the MIT license in the hope they might be useful to others. See LICENSE.txt for details.
 
-## Author
+## Authors
 
-Kamil Trzciński, 2017
+Original Author: Kamil Trzciński, 2017
+Me: Jianshen Liu, 2019
