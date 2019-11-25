@@ -78,5 +78,5 @@ These scripts are made available under the MIT license in the hope they might be
 
 ## Authors
 
-Original Author: Kamil Trzciński, 2017
-Me: Jianshen Liu, 2019
+- Original Author: Kamil Trzciński, 2017
+- Me: Jianshen Liu, 2019
